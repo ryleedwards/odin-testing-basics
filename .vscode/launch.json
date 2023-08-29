@@ -5,7 +5,7 @@
       "name": "nodemon",
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "program": "${workspaceFolder}/capitalize.js",
+      "program": "${workspaceFolder}/caesarCipher.js",
       "request": "launch",
       "restart": true,
       // "runtimeExecutable": "nodemon", /* ORIGINAL VALUE */

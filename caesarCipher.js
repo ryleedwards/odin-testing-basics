@@ -52,17 +52,19 @@ function _toStr(arr) {
 function _shiftChars(arr, shiftKey) {
   const shiftedArr = [];
 
-  //TODO handle spaces
-
   arr.forEach((char) => {
-    // get initial index
-    const oldCharIndex = letters.indexOf(char);
-    // find new index
-    const newCharIndex = (oldCharIndex + shiftKey) % 26;
-    // get new char
-    const newChar = letters[newCharIndex];
-    // push to result array
-    shiftedArr.push(newChar);
+    // handle spaces
+    if (char === ' ') shiftedArr.push(char);
+    else {
+      // get initial index
+      const oldCharIndex = letters.indexOf(char);
+      // find new index
+      const newCharIndex = (oldCharIndex + shiftKey) % 26;
+      // get new char
+      const newChar = letters[newCharIndex];
+      // push to result array
+      shiftedArr.push(newChar);
+    }
   });
   return shiftedArr;
 }

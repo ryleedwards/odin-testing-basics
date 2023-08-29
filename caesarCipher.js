@@ -30,6 +30,7 @@ const letters = [
 const caesarCipher = (str, shift) => {
   const strArr = _toArray(str);
   const arrShifted = _shiftChars(strArr, shift);
+  return _toStr(arrShifted);
 };
 
 function _toArray(str) {
@@ -38,6 +39,14 @@ function _toArray(str) {
     arr.push(str.charAt(i));
   }
   return arr;
+}
+
+function _toStr(arr) {
+  let str = '';
+  arr.forEach((char) => {
+    str += char;
+  });
+  return str;
 }
 
 function _shiftChars(arr, shiftKey) {

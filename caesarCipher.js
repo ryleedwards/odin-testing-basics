@@ -28,11 +28,11 @@ const letters = [
 ];
 
 const caesarCipher = (str, shift) => {
-  const strArr = _ToArray(str);
+  const strArr = _toArray(str);
   const arrShifted = _shiftChars(strArr, shift);
 };
 
-function _ToArray(str) {
+function _toArray(str) {
   const arr = [];
   for (let i = 0; i < str.length; i++) {
     arr.push(str.charAt(i));
